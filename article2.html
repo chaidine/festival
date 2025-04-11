@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,21 +31,20 @@
 
   			gtag('config', 'G-39RLFYST27');
 		</script>
-
 </head>
 <body>
 
 	<!--00.header-->
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark maNav">
 		<a class="navbar-brand" href="index.html">
-			<img src="images/FABE.jpg" width="100"/>
+			<img src="images/FABE.jpg" width="100" alt="Logo du festival FABE"/>
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Menu de navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav ml-auto">
-			<a class="nav-item nav-link " href="index.html">accueil <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="index.html">Accueil <span class="sr-only">(current)</span></a>
 			<a class="nav-item nav-link" href="films.html">Les Films</a>
 			<a class="nav-item nav-link" href="index.html#booking">Réservation</a>
 			<a href="blog.html" class="active nav-item nav-link navLink">Actualités</a>
@@ -60,18 +58,20 @@
     <div class="container-fluid">
         <div class="container article p-5">
 			<div class="row">
-					<h1>-Titre-</h1>
+				
 			</div>
 			<div class="row justify-content-center">
-				<div class="firstImg col-md-6 "><img src="images/03-actu.jpg" class="img-fluid" alt=""></div>
+				<div class="firstImg col-md-6">
+					<img src="images/03-actu.jpg" class="img-fluid" alt="Affiche du festival de cinéma sous les étoiles à Paris">
+				</div>
 			</div>
 			<div class="row">
-				<div class="infoBlog pl-4 pt-5 "> | Par SHE</div>
+				<div class="infoBlog pl-4 pt-5"> | Par SHE</div>
 			</div>
 			<div class="row">
 				<article>
 					<div class="date">29 janvier 2025</div>
-					<h2>Festival de films en plein air : les premiers lieux dévoilés</h2>
+					<h1>Festival de films en plein air : les premiers lieux dévoilés</h1>
 					<p>Les préparatifs s’accélèrent pour le festival de cinéma en plein air prévu cet été à Paris.</p>
 					<p>Les organisateurs ont révélé que les projections auront lieu dans <strong>trois lieux emblématiques</strong> de la capitale :</p>
 					<ul>
@@ -80,7 +80,7 @@
 					  <li>Parc des Buttes-Chaumont</li>
 					</ul>
 					<p>Chacun de ces lieux accueillera une soirée de projection, avec écrans géants, transats, ambiance musicale et animations. Le tout autour d’un thème unique : <strong>le voyage</strong>.</p>
-				  </article>
+				</article>
 			</div> 
         </div>
     </div>
@@ -103,9 +103,9 @@
 				<div class="col-12 col-md-3 address">
 					<h2>Contactez-nous</h2>
 					<div class="contactIcons mb-3">
-						<p><span class="pr-3"><i class="fas fa-home"></i></span>98 Boulevard Edouard Herriot, 06200 NICE</p>
-						<p><span class="pr-3"><i class="fas fa-envelope"></i></span>filmalabelleetoile@festival.com</p>
-						<p><span class="pr-3"><i class="fas fa-phone"></i></span>0602030405</p>
+						<p><span class="pr-3"><i class="fas fa-home" aria-hidden="true"></i></span>98 Boulevard Edouard Herriot, 06200 NICE</p>
+						<p><span class="pr-3"><i class="fas fa-envelope" aria-hidden="true"></i></span>filmalabelleetoile@festival.com</p>
+						<p><span class="pr-3"><i class="fas fa-phone" aria-hidden="true"></i></span>0602030405</p>
 					</div>
 				</div>
 				<div class="col-12 col-md-3 partenaire">
@@ -128,20 +128,19 @@
 								</a>
 							</li>
 						</ul>
-											
 					</div>
 				</div>
 				<div class="col-12 col-md-3 social">
 					<h2>Suivez-nous !</h2>
 					<div class="socialicons">
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
-						<a href="#"><i class="fab fa-youtube"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#" aria-label="Page Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+						<a href="#" aria-label="Chaîne YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+						<a href="#" aria-label="Compte Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
 					</div>
 				</div>
 			</div>	
 		</div>
-		<div class="socketBkg ">
+		<div class="socketBkg">
 			<div class="socket text-center">
 				<p>Site réalisé par CHD et SHE dans le cadre d'un travail étudiant <br>
 					Université Côte d'Azur - <a href="https://univ-cotedazur.fr/" target="_blank">Univ-Côte d'Azur</a></p>
@@ -150,8 +149,10 @@
 	</footer>
 	<!--end footer-->
 
-	<!--Scroll to top button-->
-	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+	<!--Scroll to top button accessible-->
+	<button onclick="topFunction()" id="myBtn" title="Revenir en haut de la page" aria-label="Revenir en haut de la page">
+		<i class="fas fa-chevron-up" aria-hidden="true"></i>
+	</button>
 	<!--End Scroll to top button-->
 
     <!-- Optional JavaScript -->

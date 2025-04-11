@@ -1,69 +1,68 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<title>CONTACT !</title>
-		
-		<!--Metatags-->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		
-		<!--Open graph data-->
-		<meta property="og:title" content=""/>
-		<meta property="og:type" content=""/>
-		<meta property="og:url" content=""/>
-		<meta property="og:image" content=""/>
-		<meta property="og:description" content=""/>
+	<title>Contact</title>
 
-
-	<!--fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700" rel="stylesheet">
-	<!--CSS-->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!--<link rel="stylesheet" href="css/style.css">-->
-	<link rel="stylesheet" href="css/stylescss.css">
-	<link rel="stylesheet"  href="webfonts/all.css">
+	<!-- Metatags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Contactez-nous pour toute demande ou information supplémentaire.">
 	
-	<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-39RLFYST27"></script>
-		<script>
-  			window.dataLayer = window.dataLayer || [];
-  			function gtag(){dataLayer.push(arguments);}
- 			 gtag('js', new Date());
+	<!-- Open Graph Data -->
+	<meta property="og:title" content="Contactez-nous">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="URL_DE_VOTRE_PAGE_CONTACT">
+	<meta property="og:image" content="URL_DE_L_IMAGE">
+	<meta property="og:description" content="Contactez notre équipe pour des questions ou informations supplémentaires.">
 
-  			gtag('config', 'G-39RLFYST27');
-		</script>
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/stylescss.css">
+	<link rel="stylesheet" href="webfonts/all.css">
 
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-39RLFYST27"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'G-39RLFYST27');
+	</script>
 </head>
 <body>
 
-	<!--00.header-->
+	<!-- Header -->
 	<nav class="navbar sticky-top navbar-expand-lg navbar-dark maNav">
 		<a class="navbar-brand" href="index.html">
-			<img src="images/FABE.jpg" width="100"/>
+			<img src="images/FABE.jpg" alt="Logo de l'entreprise" width="100"/>
 		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Menu de navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 			<div class="navbar-nav ml-auto">
-			<a class="nav-item nav-link " href="index.html">accueil <span class="sr-only">(current)</span></a>
-			<a class="nav-item nav-link" href="films.html">Les Films</a>
-			<a class="nav-item nav-link" href="index.html#booking">Réservation</a>
-			<a href="blog.html" class="nav-item nav-link navLink">Actualités</a>
-			<a class="nav-item nav-link active" href="#">Contact</a>
+				<a class="nav-item nav-link" href="index.html">Accueil</a>
+				<a class="nav-item nav-link" href="films.html">Les Films</a>
+				<a class="nav-item nav-link" href="index.html#booking">Réservation</a>
+				<a href="blog.html" class="nav-item nav-link">Actualités</a>
+				<a class="nav-item nav-link active" href="#">Contact</a>
 			</div>
 		</div>
 	</nav>
-	<!--end header-->
-	<!--Map-->
+	<!-- End Header -->
+
+	<!-- Map -->
 	<section class="container-fluid">
-		<iframe src="images/CHAUMONT.jpg" width="200" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe src="images/CHAUMONT.jpg" width="200" height="350" frameborder="0" style="border:0" allowfullscreen title="Localisation de l'établissement"></iframe>
     </section>
+
+	<!-- Contact Form Section -->
 	<section class="container-fluid contactPage">
 		<div class="container py-5">
 			<div class="row">
+				<!-- Contact Form -->
 				<div class="col-sm-12 col-md-6">
 					<div class="card bg-light cardForm">
 						<div class="card-body">
@@ -72,37 +71,39 @@
 							<form class="needs-validation" novalidate id="contactValidation">
 								<div class="form-group">
 									<label for="nom">Prénom Nom</label>
-									<input class="form-control" required type="text" name="nom" id="nom" placeholder="Jean Dupond" />
+									<input class="form-control" required type="text" name="nom" id="nom" placeholder="Jean Dupond" aria-label="Nom et prénom"/>
 									<div class="invalid-tooltip">
 										Merci de renseigner vos prénom et nom.
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="mail">E-mail</label>
-									<input class="form-control" required type="email" name="mail" id="mail" placeholder="jeandupond@monmail.fr" />
+									<input class="form-control" required type="email" name="mail" id="mail" placeholder="jeandupond@monmail.fr" aria-label="Adresse e-mail"/>
 									<div class="invalid-tooltip">
 										Merci de renseigner votre e-mail.
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="sujet">Sujet</label>
-									<input class="form-control" required type="text" name="sujet" id="sujet" placeholder="Sujet" />
+									<input class="form-control" required type="text" name="sujet" id="sujet" placeholder="Sujet" aria-label="Sujet du message"/>
 									<div class="invalid-tooltip">
 										Merci de renseigner le sujet.
 									</div>
 								</div>
 								<div class="form-group">
 									<label for="message">Votre message</label>
-									<textarea class="form-control" required name="message" id="message" rows="5" cols="50" placeholder="Composez votre texte !"></textarea>
+									<textarea class="form-control" required name="message" id="message" rows="5" placeholder="Composez votre texte !"></textarea>
 									<div class="invalid-tooltip">
 										Merci de rédiger votre message.
 									</div>
 								</div>
-								<button type="submit" class="btn btn-custom">Je réserve !</button>
+								<button type="submit" class="btn btn-custom" aria-label="Envoyer le message">Envoyer</button>
 							</form>
 						</div>
 					</div>
 				</div>
+
+				<!-- Contact Details -->
 				<div class="col-sm-12 col-md-6 address">
 					<h2>D'autres moyens de nous contacter</h2>
 					<div class="contactIcons mb-3">
@@ -111,29 +112,27 @@
 						<p><span class="pr-3"><i class="fas fa-phone"></i></span>Tél : 0602030405</p>
 					</div>
 					<h2>Accueil téléphonique</h2>
-					<p>
-						- DU LUNDI AU VENDREDI DE 9H A 12H ET 14H A 18H-
-					</p>
-					<div class="banContact"><img src="images/BanContact.jpg" alt=""></div>
+					<p>- DU LUNDI AU VENDREDI DE 9H À 12H ET DE 14H À 18H -</p>
+					<div class="banContact">
+						<img src="images/BanContact.jpg" alt="Bannière de contact" />
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	
-	
 
-	<!--07.footer-->
+	<!-- Footer -->
 	<footer class="container-fluid footer">
 		<div class="container py-3">
 			<div class="row">
 				<div class="col-12 col-md-3">
 					<h2>Liens utiles</h2>
 					<div class="footerLinks">
-						<a href="index.html">Accueil</a>
-						<a href="films.html">Les Films</a>
-						<a href="blog.html">Actualités</a>
-						<a href="contact.html">Contact</a>
-						<a href="mentions-legales.html">Mentions légales</a>
+						<a href="index.html" aria-label="Retour à la page d'accueil">Accueil</a>
+						<a href="films.html" aria-label="Voir les films">Les Films</a>
+						<a href="blog.html" aria-label="Lire les actualités">Actualités</a>
+						<a href="contact.html" aria-label="Page de contact">Contact</a>
+						<a href="mentions-legales.html" aria-label="Mentions légales">Mentions légales</a>
 					</div>
 				</div>
 				<div class="col-12 col-md-3 address">
@@ -148,50 +147,42 @@
 					<h2>Partenariats</h2>
 					<div class="contactIcons mb-3">
 						<ul>
-							<li>
-								<a href="https://www.iledefrance.fr" target="_blank">
-									<img src="images/IDF.jpg" alt="Logo Île-de-France" style="height: 30px; vertical-align: middle;">
-								</a>
-							</li>
-							<li>
-								<a href="https://www.paris.fr" target="_blank">
-									<img src="images/Mairie de Paris.jpg" alt="Logo Paris" style="height: 30px; vertical-align: middle;">
-								</a>
-							</li>
-							<li>
-								<a href="https://www.francetvinfo.fr" target="_blank">
-									<img src="images/France.tv.jpg" alt="Logo France TV" style="height: 30px; vertical-align: middle;">
-								</a>
-							</li>
+							<li><a href="https://www.iledefrance.fr" target="_blank" aria-label="Visiter Île-de-France">
+								<img src="images/IDF.jpg" alt="Logo Île-de-France" style="height: 30px; vertical-align: middle;">
+							</a></li>
+							<li><a href="https://www.paris.fr" target="_blank" aria-label="Visiter Paris">
+								<img src="images/Mairie de Paris.jpg" alt="Logo Paris" style="height: 30px; vertical-align: middle;">
+							</a></li>
+							<li><a href="https://www.francetvinfo.fr" target="_blank" aria-label="Visiter France TV">
+								<img src="images/France.tv.jpg" alt="Logo France TV" style="height: 30px; vertical-align: middle;">
+							</a></li>
 						</ul>
-											
 					</div>
 				</div>
 				<div class="col-12 col-md-3 social">
 					<h2>Suivez-nous !</h2>
 					<div class="socialicons">
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
-						<a href="#"><i class="fab fa-youtube"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#" aria-label="Page Facebook"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" aria-label="Chaîne YouTube"><i class="fab fa-youtube"></i></a>
+						<a href="#" aria-label="Page Instagram"><i class="fab fa-instagram"></i></a>
 					</div>
 				</div>
 			</div>	
 		</div>
-		<div class="socketBkg ">
+		<div class="socketBkg">
 			<div class="socket text-center">
 				<p>Site réalisé par CHD et SHE dans le cadre d'un travail étudiant <br>
-					Université Côte d'Azur - <a href="https://univ-cotedazur.fr/" target="_blank">Univ-Côte d'Azur</a></p>
+					Université Côte d'Azur - <a href="https://univ-cotedazur.fr/" target="_blank" aria-label="Visiter l'Université Côte d'Azur">Univ-Côte d'Azur</a></p>
 			</div>
 		</div>
 	</footer>
-	<!--end footer-->
+	<!-- End Footer -->
 
-	<!--Scroll to top button-->
-	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
-	<!--End Scroll to top button-->
+	<!-- Scroll to top button -->
+	<button onclick="topFunction()" id="myBtn" title="Retour en haut de la page" aria-label="Retour en haut"><i class="fas fa-chevron-up"></i></button>
+	<!-- End Scroll to top button -->
 
-    <!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<!-- JavaScript -->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
