@@ -1,214 +1,204 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<style>
-  /* --- CSS critique pour affichage immédiat --- */
+    <style>
+        /* --- CSS critique pour affichage immédiat --- */
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #fff;
+        }
 
-  body {
-    margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #fff;
-  }
+        header, nav, .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5rem 1rem;
+            background-color: #000;
+            color: #fff;
+        }
 
-  header, nav, .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: #000;
-    color: #fff;
-  }
+        .navbar-brand img {
+            height: 50px;
+        }
 
-  .navbar-brand img {
-    height: 50px;
-  }
+        .btn-custom {
+            background-color: #f39c12;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
 
-  .btn-custom {
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
+        .btn-custom:hover {
+            background-color: #e67e22;
+        }
 
-  .btn-custom:hover {
-    background-color: #e67e22;
-  }
+        h1, h2, h3 {
+            font-weight: bold;
+        }
 
-  h1, h2, h3 {
-    font-weight: bold;
-  }
+        .container, .container-fluid {
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 auto;
+        }
 
-  .container, .container-fluid {
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
+        .contactIcons i {
+            margin-right: 10px;
+        }
 
-  .contactIcons i {
-    margin-right: 10px;
-  }
+        .socialicons a {
+            margin-right: 10px;
+            color: #fff;
+        }
+    </style>
+    <link rel="stylesheet" href="css/stylescss.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/stylescss.min.css"></noscript>
 
-  .socialicons a {
-    margin-right: 10px;
-    color: #fff;
-  }
-</style>
-<link rel="stylesheet" href="css/stylescss.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="css/stylescss.css"></noscript>
+    <title>Actualités du festival !</title>
 
+    <!-- Metatags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Suivez les dernières actualités du festival de films en plein air de Paris, engagé dans une démarche éco-responsable.">
 
-	<title>Actualités du festival !</title>
+    <!-- Open graph data -->
+    <meta property="og:title" content="Actualités du festival !">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://votre-site.com/blog.html">
+    <meta property="og:image" content="https://votre-site.com/images/03-actu.webp">
+    <meta property="og:description" content="Découvrez l'engagement écologique du festival parisien : énergie solaire, foodtrucks bio et zéro déchet.">
 
-	<!--Metatags-->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Suivez les dernières actualités du festival de films en plein air de Paris, engagé dans une démarche éco-responsable.">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-	<!--Open graph data-->
-	<meta property="og:title" content="Actualités du festival !">
-	<meta property="og:type" content="article">
-	<meta property="og:url" content="https://votre-site.com/blog.html">
-	<meta property="og:image" content="https://votre-site.com/images/03-actu.jpg">
-	<meta property="og:description" content="Découvrez l'engagement écologique du festival parisien : énergie solaire, foodtrucks bio et zéro déchet.">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha384-At2d4t0c58HFIqVZecpccAa4wmAnXY0UsDtrjBG0YsZjGJ8ADcY0syuhdkhVAX+F" crossorigin="anonymous">
 
-	<!--fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700" rel="stylesheet">
-
-	<!--CSS-->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/stylescss.css">
-	<link rel="stylesheet" href="webfonts/all.css">
-
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-39RLFYST27"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-39RLFYST27');
-	</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-39RLFYST27"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-39RLFYST27');
+    </script>
 </head>
 <body>
 
 <!-- Header -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark maNav" role="navigation" aria-label="Menu principal">
-	<a class="navbar-brand" href="index.html">Films à la Belle Etoile>
-			<img src="images/FABE.jpg" width="100" alt="Logo du festival Films à la Belle Etoile"/>
-	</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" 
-		aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Ouvrir le menu">
-		<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		<div class="navbar-nav ml-auto">
-			<a class="nav-item nav-link" href="index.html">Accueil</a>
-			<a class="nav-item nav-link" href="films.html">Les Films</a>
-			<a class="nav-item nav-link" href="index.html#booking">Réservation</a>
-			<a href="blog.html" class="active nav-item nav-link navLink">Actualités</a>
-			<a class="nav-item nav-link" href="contact.html">Contact</a>
-		</div>
-	</div>
+    <a class="navbar-brand" href="index.html">Films à la Belle Etoile
+        <img src="images/FABE.jpg" width="100" alt="Logo du festival Films à la Belle Etoile"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="index.html">Accueil</a>
+            <a class="nav-item nav-link" href="films.html">Les Films</a>
+            <a class="nav-item nav-link" href="index.html#booking">Réservation</a>
+            <a href="blog.html" class="active nav-item nav-link navLink">Actualités</a>
+            <a class="nav-item nav-link" href="contact.html">Contact</a>
+        </div>
+    </div>
 </nav>
 
 <!-- Article -->
 <main class="container-fluid" role="main">
-	<article class="container article p-5">
-		<header class="row">
-			<h1 class="col-12">Un festival éco-responsable : priorité au durable et au local</h1>
-		</header>
-		<div class="row justify-content-center">
-			<div class="firstImg col-md-6">
-				<img src="images/03-actu.jpg" class="img-fluid" alt="Affiche du festival illustrant l'engagement écologique">
-			</div>
-		</div>
-		<div class="row">
-			<div class="infoBlog pl-4 pt-5"> | Par SHE</div>
-		</div>
-		<div class="row">
-			<section class="col-12">
-				<div class="date">10 février 2025</div>
-				<p>Le festival de projection de films en plein air de Paris ne se contente pas de projeter des films : il s’inscrit aussi dans une <strong>démarche éco-responsable</strong>.</p>
-				<p>Les organisateurs ont annoncé plusieurs mesures concrètes :</p>
-				<ul>
-					<li>Énergie solaire pour les équipements techniques</li>
-					<li>Présence de foodtrucks locaux et bio</li>
-					<li>Gobelets réutilisables et tri sélectif sur chaque site</li>
-				</ul>
-				<p>L’objectif est clair : proposer un événement culturel majeur, sans compromettre l’environnement. Une belle façon de voyager… sans laisser de trace !</p>
-			</section>
-		</div>
-	</article>
+    <article class="container article p-5">
+        <header class="row">
+            <h1 class="col-12">Un festival éco-responsable : priorité au durable et au local</h1>
+        </header>
+        <div class="row justify-content-center">
+            <div class="firstImg col-md-6">
+                <img src="images/03-actu.webp" class="img-fluid" alt="Affiche du festival illustrant l'engagement écologique">
+            </div>
+        </div>
+        <div class="row">
+            <div class="infoBlog pl-4 pt-5"> | Par SHE</div>
+        </div>
+        <div class="row">
+            <section class="col-12">
+                <div class="date">10 février 2025</div>
+                <p>Le festival de projection de films en plein air de Paris ne se contente pas de projeter des films : il s’inscrit aussi dans une <strong>démarche éco-responsable</strong>.</p>
+                <p>Les organisateurs ont annoncé plusieurs mesures concrètes :</p>
+                <ul>
+                    <li>Énergie solaire pour les équipements techniques</li>
+                    <li>Présence de foodtrucks locaux et bio</li>
+                    <li>Gobelets réutilisables et tri sélectif sur chaque site</li>
+                </ul>
+                <p>L’objectif est clair : proposer un événement culturel majeur, sans compromettre l’environnement. Une belle façon de voyager… sans laisser de trace !</p>
+            </section>
+        </div>
+    </article>
 </main>
 
 <!-- Footer -->
 <footer class="container-fluid footer" role="contentinfo">
-	<div class="container py-3">
-		<div class="row">
-			<div class="col-12 col-md-3">
-				<h2>Liens utiles</h2>
-				<nav class="footerLinks" aria-label="Liens utiles">
-					<a href="index.html">Accueil</a>
-					<a href="films.html">Les Films</a>
-					<a href="blog.html">Actualités</a>
-					<a href="contact.html">Contact</a>
-					<a href="mentions-legales.html">Mentions légales</a>
-				</nav>
-			</div>
-			<div class="col-12 col-md-3 address">
-				<h2>Contactez-nous</h2>
-				<address class="contactIcons mb-3">
-					<p><i class="fas fa-home pr-3" aria-hidden="true"></i>98 Boulevard Edouard Herriot, 06200 NICE</p>
-					<p><i class="fas fa-envelope pr-3" aria-hidden="true"></i><a href="mailto:filmalabelleetoile@festival.com">filmalabelleetoile@festival.com</a></p>
-					<p><i class="fas fa-phone pr-3" aria-hidden="true"></i><a href="tel:+33602030405">0602030405</a></p>
-				</address>
-			</div>
-			<div class="col-12 col-md-3 partenaire">
-				<h2>Partenariats</h2>
-				<ul class="contactIcons mb-3">
-					<li>
-						<a href="https://www.iledefrance.fr" target="_blank" rel="noopener">
-							<img src="images/IDF.jpg" alt="Logo Île-de-France" style="height: 30px;">
-						</a>
-					</li>
-					<li>
-						<a href="https://www.paris.fr" target="_blank" rel="noopener">
-							<img src="images/Mairie de Paris.jpg" alt="Logo Paris" style="height: 30px;">
-						</a>
-					</li>
-					<li>
-						<a href="https://www.francetvinfo.fr" target="_blank" rel="noopener">
-							<img src="images/France.tv.jpg" alt="Logo France TV" style="height: 30px;">
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="col-12 col-md-3 social">
-				<h2>Suivez-nous !</h2>
-				<div class="socialicons" aria-label="Réseaux sociaux">
-					<a href="#" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="socketBkg">
-		<div class="socket text-center">
-			<p>Site réalisé par CHD et SHE dans le cadre d'un travail étudiant<br>
-			Université Côte d'Azur - <a href="https://univ-cotedazur.fr/" target="_blank" rel="noopener">Univ-Côte d'Azur</a></p>
-		</div>
-	</div>
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <h2>Liens utiles</h2>
+                <nav class="footerLinks" aria-label="Liens utiles">
+                    <a href="index.html">Accueil</a>
+                    <a href="films.html">Les Films</a>
+                    <a href="blog.html">Actualités</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                </nav>
+            </div>
+            <div class="col-12 col-md-3 address">
+                <h2>Contactez-nous</h2>
+                <address class="contactIcons mb-3">
+                    <p><i class="fas fa-home pr-3" aria-hidden="true"></i>98 Boulevard Edouard Herriot, 06200 NICE</p>
+                    <p><i class="fas fa-envelope pr-3" aria-hidden="true"></i><a href="mailto:filmalabelleetoile@festival.com">filmalabelleetoile@festival.com</a></p>
+                    <p><i class="fas fa-phone pr-3" aria-hidden="true"></i><a href="tel:+33602030405">0602030405</a></p>
+                </address>
+            </div>
+            <div class="col-12 col-md-3 partenaire">
+                <h2>Partenariats</h2>
+                <ul class="contactIcons mb-3">
+                    <li><a href="https://www.iledefrance.fr" target="_blank" rel="noopener">
+                        <img src="images/IDF.jpg" alt="Logo Île-de-France" style="height: 30px;">
+                    </a></li>
+                    <li><a href="https://www.paris.fr" target="_blank" rel="noopener">
+                        <img src="images/Mairie de Paris.jpg" alt="Logo Paris" style="height: 30px;">
+                    </a></li>
+                    <li><a href="https://www.francetvinfo.fr" target="_blank" rel="noopener">
+                        <img src="images/France.tv.jpg" alt="Logo France TV" style="height: 30px;">
+                    </a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-3 social">
+                <h2>Suivez-nous !</h2>
+                <div class="socialicons" aria-label="Réseaux sociaux">
+                    <a href="#" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="socketBkg">
+        <div class="socket text-center">
+            <p>Site réalisé par CHD et SHE dans le cadre d'un travail étudiant<br>
+            Université Côte d'Azur - <a href="https://univ-cotedazur.fr/" target="_blank" rel="noopener">Univ-Côte d'Azur</a></p>
+        </div>
+    </div>
 </footer>
 
 <!-- Scroll to top button -->
 <button onclick="topFunction()" id="myBtn" title="Retour en haut"><i class="fas fa-chevron-up"></i></button>
 
 <!-- JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
-<script src="js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" defer crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer crossorigin="anonymous"></script>
+<script src="js/main.js" defer></script>
 
 </body>
 </html>

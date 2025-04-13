@@ -1,215 +1,185 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<style>
-  /* --- CSS critique pour affichage immédiat --- */
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Festival de films en plein air à Paris. Découvrez les actualités du festival!">
+    
+    <!-- Open Graph meta data -->
+    <meta property="og:title" content="Festival Films à la Belle Etoile">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-site.com">
+    <meta property="og:image" content="images/03-actu.jpg">
+    <meta property="og:description" content="Suivez les actualités du festival de cinéma en plein air à Paris.">
 
-  body {
-    margin: 0;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background-color: #fff;
-  }
+    <!-- Titre de la page -->
+    <title>Actualités du festival !</title>
 
-  header, nav, .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-    background-color: #000;
-    color: #fff;
-  }
+    <!-- Preload des ressources critiques -->
+    <link rel="preload" href="images/FABE.jpg" as="image">
+    <link rel="preload" href="images/03-actu.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700&display=swap" as="font" type="font/woff2" crossorigin="anonymous">
+    
+    <!-- CSS critique et minifié -->
+    <style>
+      /* --- CSS critique pour affichage immédiat --- */
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #fff;
+      }
+      header, nav, .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        background-color: #000;
+        color: #fff;
+      }
+      .navbar-brand img {
+        height: 50px;
+      }
+      .btn-custom {
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+      .btn-custom:hover {
+        background-color: #e67e22;
+      }
+      .container, .container-fluid {
+        width: 100%;
+        padding: 0 15px;
+        margin: 0 auto;
+      }
+    </style>
 
-  .navbar-brand img {
-    height: 50px;
-  }
+    <!-- Chargement différé du CSS -->
+    <link rel="stylesheet" href="css/stylescss.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="css/stylescss.min.css"></noscript>
 
-  .btn-custom {
-    background-color: #f39c12;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-  }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700&display=swap" rel="stylesheet">
 
-  .btn-custom:hover {
-    background-color: #e67e22;
-  }
+    <!-- Bootstrap CSS (version minifiée et préchargée si possible) -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
-  h1, h2, h3 {
-    font-weight: bold;
-  }
+    <!-- Font Awesome (préchargement si nécessaire) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  .container, .container-fluid {
-    width: 100%;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
-
-  .contactIcons i {
-    margin-right: 10px;
-  }
-
-  .socialicons a {
-    margin-right: 10px;
-    color: #fff;
-  }
-</style>
-<link rel="stylesheet" href="css/stylescss.css" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="css/stylescss.css"></noscript>
-
-
-	<title>Actualités du festival !</title>
-	
-	<!--Metatags-->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	
-	<!--Open graph data-->
-	<meta property="og:title" content=""/>
-	<meta property="og:type" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:description" content=""/>
-
-	<!--fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700" rel="stylesheet">
-	<!--CSS-->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<!--<link rel="stylesheet" href="css/style.css">-->
-	<link rel="stylesheet" href="css/stylescss.css">
-	<link rel="stylesheet"  href="webfonts/all.css">
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-39RLFYST27"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', 'G-39RLFYST27');
-	</script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-39RLFYST27"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-39RLFYST27');
+    </script>
 </head>
 <body>
 
-	<!--00.header-->
-	<nav class="navbar sticky-top navbar-expand-lg navbar-dark maNav">
-		<a class="navbar-brand" href="index.html">Films à la Belle Etoile>
-			<img src="images/FABE.jpg" width="100" alt="Logo du festival Films à la Belle Etoile"/>
-		</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-			<div class="navbar-nav ml-auto">
-			<a class="nav-item nav-link" href="index.html">accueil <span class="sr-only">(current)</span></a>
-			<a class="nav-item nav-link" href="films.html">Les Films</a>
-			<a class="nav-item nav-link" href="index.html#booking">Réservation</a>
-			<a href="blog.html" class="active nav-item nav-link navLink">Actualités</a>
-			<a class="nav-item nav-link" href="contact.html">Contact</a>
-			</div>
-		</div>
-	</nav>
-	<!--end header-->
-	
-	<!--Article-->
-	<div class="container-fluid">
-		<div class="container article p-5">
-			<div class="row">
-				
-			</div>
-			<div class="row justify-content-center">
-				<div class="firstImg col-md-6 "><img src="images/03-actu.jpg" class="img-fluid" alt="Affiche du festival de cinéma sous les étoiles à Paris"></div>
-			</div>
-			<div class="row">
-				<div class="infoBlog pl-4 pt-5"> | Par SHE</div>
-			</div>
-			<div class="row">
-				<article>
-					<div class="date">15 janvier 2025</div>
-					<h1>Un nouveau festival de cinéma sous les étoiles annoncé pour l’été à Paris</h1>
-					<p>Paris se prépare à accueillir un tout nouveau rendez-vous culturel cet été : un <strong>festival de projections de films en plein air</strong>, prévu les <strong>5, 6 et 7 août 2025</strong>.</p>
-					<p>L’événement, entièrement gratuit, mettra à l’honneur <strong>12 films autour du thème du voyage</strong>. L’idée ? Inviter le public à s’évader, rêver, réfléchir, en profitant du cinéma en plein air, dans des lieux emblématiques de la capitale.</p>
-					<p>Les organisateurs promettent une ambiance conviviale, des soirées accessibles à tous, et une programmation éclectique mêlant grands classiques, films contemporains et découvertes du monde.</p>
-				</article>
-			</div> 
-		</div>
-	</div>
-	<!--end Article-->
+    <!-- Navigation -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark maNav">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/FABE.jpg" width="100" alt="Logo du festival Films à la Belle Etoile">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="index.html">Accueil</a>
+                <a class="nav-item nav-link" href="films.html">Les Films</a>
+                <a class="nav-item nav-link" href="index.html#booking">Réservation</a>
+                <a class="nav-item nav-link active" href="blog.html">Actualités</a>
+                <a class="nav-item nav-link" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-	<!--07.footer-->
-	<footer class="container-fluid footer">
-		<div class="container py-3">
-			<div class="row">
-				<div class="col-12 col-md-3">
-					<h2>Liens utiles</h2>
-					<div class="footerLinks">
-						<a href="index.html">Accueil</a>
-						<a href="films.html">Les Films</a>
-						<a href="blog.html">Actualités</a>
-						<a href="contact.html">Contact</a>
-						<a href="mentions-legales.html">Mentions légales</a>
-					</div>
-				</div>
-				<div class="col-12 col-md-3 address">
-					<h2>Contactez-nous</h2>
-					<div class="contactIcons mb-3">
-						<p><span class="pr-3"><i class="fas fa-home" aria-hidden="true"></i></span>98 Boulevard Edouard Herriot, 06200 NICE</p>
-						<p><span class="pr-3"><i class="fas fa-envelope" aria-hidden="true"></i></span>filmalabelleetoile@festival.com</p>
-						<p><span class="pr-3"><i class="fas fa-phone" aria-hidden="true"></i></span>0602030405</p>
-					</div>
-				</div>
-				<div class="col-12 col-md-3 partenaire">
-					<h2>Partenariats</h2>
-					<div class="contactIcons mb-3">
-						<ul>
-							<li>
-								<a href="https://www.iledefrance.fr" target="_blank">
-									<img src="images/IDF.jpg" alt="Logo Île-de-France" style="height: 30px; vertical-align: middle;">
-								</a>
-							</li>
-							<li>
-								<a href="https://www.paris.fr" target="_blank">
-									<img src="images/Mairie de Paris.jpg" alt="Logo Paris" style="height: 30px; vertical-align: middle;">
-								</a>
-							</li>
-							<li>
-								<a href="https://www.francetvinfo.fr" target="_blank">
-									<img src="images/France.tv.jpg" alt="Logo France TV" style="height: 30px; vertical-align: middle;">
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-12 col-md-3 social">
-					<h2>Suivez-nous !</h2>
-					<div class="socialicons">
-						<a href="#" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-      <a href="#" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-					</div>
-				</div>
-			</div>	
-		</div>
-		<div class="socketBkg ">
-			<div class="socket text-center">
-				<p>Site réalisé par CHD et SHE dans le cadre d'un travail étudiant <br>
-					Université Côte d'Azur - <a href="https://univ-cotedazur.fr/" target="_blank">Univ-Côte d'Azur</a></p>
-			</div>
-		</div>
-	</footer>
-	<!--end footer-->
+    <!-- Article -->
+    <div class="container-fluid">
+        <div class="container article p-5">
+            <div class="row justify-content-center">
+                <div class="firstImg col-md-6">
+                    <img src="images/03-actu.jpg" class="img-fluid" alt="Affiche du festival de cinéma sous les étoiles à Paris" loading="lazy">
+                </div>
+            </div>
+            <div class="row">
+                <div class="infoBlog pl-4 pt-5"> | Par SHE</div>
+            </div>
+            <div class="row">
+                <article>
+                    <div class="date">15 janvier 2025</div>
+                    <h1>Un nouveau festival de cinéma sous les étoiles annoncé pour l’été à Paris</h1>
+                    <p>Paris se prépare à accueillir un tout nouveau rendez-vous culturel cet été : un <strong>festival de projections de films en plein air</strong>, prévu les <strong>5, 6 et 7 août 2025</strong>.</p>
+                    <p>L’événement, entièrement gratuit, mettra à l’honneur <strong>12 films autour du thème du voyage</strong>. L’idée ? Inviter le public à s’évader, rêver, réfléchir, en profitant du cinéma en plein air, dans des lieux emblématiques de la capitale.</p>
+                    <p>Les organisateurs promettent une ambiance conviviale, des soirées accessibles à tous, et une programmation éclectique mêlant grands classiques, films contemporains et découvertes du monde.</p>
+                </article>
+            </div> 
+        </div>
+    </div>
 
-	<!--Scroll to top button-->
-	<button onclick="topFunction()" id="myBtn" title="Revenir en haut" aria-label="Revenir en haut de page">
-		<i class="fas fa-chevron-up" aria-hidden="true"></i>
-	</button>
-	<!--End Scroll to top button-->
+    <!-- Footer -->
+    <footer class="container-fluid footer">
+        <div class="container py-3">
+            <div class="row">
+                <div class="col-12 col-md-3">
+                    <h2>Liens utiles</h2>
+                    <div class="footerLinks">
+                        <a href="index.html">Accueil</a>
+                        <a href="films.html">Les Films</a>
+                        <a href="blog.html">Actualités</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="mentions-legales.html">Mentions légales</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h2>Contactez-nous</h2>
+                    <div class="contactIcons mb-3">
+                        <p><i class="fas fa-home pr-3"></i>98 Boulevard Edouard Herriot, 06200 NICE</p>
+                        <p><i class="fas fa-envelope pr-3"></i><a href="mailto:filmalabelleetoile@festival.com">filmalabelleetoile@festival.com</a></p>
+                        <p><i class="fas fa-phone pr-3"></i><a href="tel:+33602030405">0602030405</a></p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h2>Partenariats</h2>
+                    <div class="contactIcons mb-3">
+                        <ul>
+                            <li><a href="https://www.iledefrance.fr" target="_blank"><img src="images/IDF.jpg" alt="Logo Île-de-France" style="height: 30px;"></a></li>
+                            <li><a href="https://www.paris.fr" target="_blank"><img src="images/Mairie de Paris.jpg" alt="Logo Paris" style="height: 30px;"></a></li>
+                            <li><a href="https://www.francetvinfo.fr" target="_blank"><img src="images/France.tv.jpg" alt="Logo France TV" style="height: 30px;"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <h2>Suivez-nous !</h2>
+                    <div class="socialicons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>	
+        </div>
+        <div class="socketBkg text-center">
+            <p>Site réalisé par CHD et SHE dans le cadre d'un travail étudiant. Université Côte d'Azur - <a href="https://univ-cotedazur.fr/" target="_blank">Univ-Côte d'Azur</a></p>
+        </div>
+    </footer>
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
+    <!-- Scroll to top button -->
+    <button onclick="topFunction()" id="myBtn" title="Revenir en haut" aria-label="Revenir en haut de page">
+        <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Optional JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
